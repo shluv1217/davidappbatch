@@ -17,6 +17,25 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
+	<dependencyManagement>
+	  <dependencies>
+	    <dependency>
+	      <groupId>com.amazonaws</groupId>
+	      <artifactId>aws-java-sdk-bom</artifactId>
+	      <version>1.11.327</version>
+	      <type>pom</type>
+	      <scope>import</scope>
+	    </dependency>
+		    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-dependencies</artifactId>
+	        <version>Brixton.SR5</version>
+	        <type>pom</type>
+	        <scope>import</scope>
+	      </dependency>
+	  </dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -50,7 +69,31 @@
           <groupId>org.mariadb.jdbc</groupId>
           <artifactId>mariadb-java-client</artifactId>
       	</dependency>
-	</dependencies>
+      	
+      	
+      	
+      	 <dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-s3</artifactId>
+		  </dependency>
+		  <dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-dynamodb</artifactId>
+		  </dependency>
+		  <dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-comprehend</artifactId>
+		  </dependency>	
+		  <dependency>
+			 <groupId>com.amazonaws</groupId>
+			 <artifactId>aws-java-sdk-rekognition</artifactId>
+			 <version>1.11.237</version>
+		  </dependency>
+      	
+      	
+		</dependencies>
+		
+		
 
 	<build>
 		<plugins>
